@@ -1,7 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Counter" x:Class="Counter.MainPage">
-	<StackLayout>
-		<!-- Place new controls here -->
-		<Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-	</StackLayout>
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:local="clr-namespace:Counter" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="Counter.MainPage">
+	
+	<ContentPage.Resources>
+			<StyleSheet Source="styles.css" />
+	</ContentPage.Resources>
+	
+  <StackLayout VerticalOptions="Center">
+    <Label HorizontalOptions="Center" Text="0" x:Name="CounterLabel"/>
+    <Button Clicked="IncrementCounterClicked" Text="Increment!"/>
+  </StackLayout>
 </ContentPage>
