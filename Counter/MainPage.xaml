@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Counter" x:Class="Counter.MainPage">
     <StackLayout VerticalOptions="Center">
-        <Label HorizontalOptions="Center" Text="0" x:Name="CounterLabel"/>
-        <Button Clicked="IncrementCounterClicked" Text="Increment!"/>
+        <Label Text="0"
+               x:Name="CounterLabel"
+               TextColor="Aquamarine"
+               FontSize="72"
+               FontFamily="ComicSans"
+               HorizontalOptions="Center"
+        />
+
+        <Button Text="Increment!"
+                Clicked="IncrementCounterClicked"
+                FontSize="46"
+        />
     </StackLayout>
 </ContentPage>
