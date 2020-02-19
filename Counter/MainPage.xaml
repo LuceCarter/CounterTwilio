@@ -9,12 +9,19 @@
                HorizontalOptions="Center"
         />
 
-        <Slider Maximum="10"
+        <Slider x:Name="IncrementSlider"
+                Maximum="10"
+                Minimum="1"
                 Value="{Binding SliderValue}"
                 />
 
-        <Label FontSize="46" 
-               Text="{Binding SliderLabel}" />
+        <Label FontSize="28"
+               TextColor="DarkOrchid"
+               Text="{Binding Source={x:Reference IncrementSlider},
+                Path=Value,
+                StringFormat='Increment: {0:F0}'}" 
+               HorizontalOptions="Center"
+               />
         <Button Text="Increment!"
                 Clicked="IncrementCounterClicked"
                 FontSize="46"
