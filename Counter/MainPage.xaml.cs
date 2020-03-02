@@ -27,15 +27,10 @@ namespace Counter
                 if ( value != _sliderValue)
                 {
                     _sliderValue = value;
-                    NotifyPropertyChanged("Slider");
+                    OnPropertyChanged(nameof(SliderValue));
                 }
             }
-        }             
-
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        }          
 
         private void IncrementCounterClicked(object sender, EventArgs e)
         {

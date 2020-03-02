@@ -25,6 +25,6 @@
         <Button Text="Increment!"
                 Clicked="IncrementCounterClicked"
                 FontSize="46"
-        />
+                />
     </StackLayout>
 </ContentPage>
