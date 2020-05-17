@@ -11,7 +11,6 @@ namespace Counter
     public partial class MainPage : ContentPage
     {
         private int count = 0;
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public MainPage()
         {

@@ -10,6 +10,7 @@
         />
 
         <Slider x:Name="IncrementSlider"
+                Margin="5,0"
                 Maximum="10"
                 Minimum="1"
                 Value="{Binding SliderValue}"
