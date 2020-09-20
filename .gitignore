@@ -4,6 +4,9 @@
 # Visual Studio (>=2015) project-specific, machine local files
 .vs/
 
+# Rider folder
+.idea/
+
 # MFractor folder
 .mfractor/
 
