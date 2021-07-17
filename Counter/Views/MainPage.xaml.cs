@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Counter.ViewModels;
 using Xamarin.Forms;
 
 namespace Counter.Views
@@ -10,31 +11,10 @@ namespace Counter.Views
     [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
-        private int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = this;
-        }
-
-        private int _sliderValue;
-        public int SliderValue {
-            get => _sliderValue;
-            set
-            {
-                if ( value != _sliderValue)
-                {
-                    _sliderValue = value;
-                    OnPropertyChanged(nameof(SliderValue));
-                }
-            }
-        }          
-
-        private void IncrementCounterClicked(object sender, EventArgs e)
-        {
-            count += SliderValue;
-            CounterLabel.Text = count.ToString();
-        }
+            BindingContext = new MainPageViewModel();
+        }        
     }
 }
